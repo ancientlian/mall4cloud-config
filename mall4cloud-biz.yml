@@ -1,0 +1,17 @@
+# 数据源
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:192.168.1.46}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:mall4cloud_biz}?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true&allowPublicKeyRetrieval=true&useAffectedRows=true
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:root}
+
+biz:
+  oss:
+    # resources-url是带有bucket的
+    resources-url: http://192.168.1.46:9000/mall4cloud
+    # 文件上传类型 0.阿里云 1.minio
+    type: 1
+    endpoint: http://192.168.1.46:9000
+    bucket: mall4cloud
+    access-key-id: admin
+    access-key-secret: admin123456
